@@ -11,7 +11,7 @@ LABEL maintainer="thelamer"
 RUN \
   echo "**** install packages ****" && \
   apk add --no-cache \
-    chromium \
+#    chromium \
     faenza-icon-theme \
     faenza-icon-theme-xfce4-appfinder \
     faenza-icon-theme-xfce4-panel \
@@ -23,8 +23,8 @@ RUN \
     xfce4-terminal && \
   echo "**** application tweaks ****" && \
   sed -i \
-    's#^Exec=.*#Exec=/usr/local/bin/wrapped-chromium#g' \
-    /usr/share/applications/chromium.desktop && \
+#    's#^Exec=.*#Exec=/usr/local/bin/wrapped-chromium#g' \
+#    /usr/share/applications/chromium.desktop && \
   mv /usr/bin/exo-open /usr/bin/exo-open-real && \
   echo "**** cleanup ****" && \
   rm -f \

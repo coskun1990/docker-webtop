@@ -22,7 +22,7 @@ RUN \
     xfce4 \
     xfce4-terminal && \
   echo "**** application tweaks ****" && \
-  sed -i \
+#  sed -i \
 #    's#^Exec=.*#Exec=/usr/local/bin/wrapped-chromium#g' \
 #    /usr/share/applications/chromium.desktop && \
   mv /usr/bin/exo-open /usr/bin/exo-open-real && \
